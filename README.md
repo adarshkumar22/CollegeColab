@@ -8,7 +8,8 @@ The driving idea behind this project is to raise awareness and simplify the proc
 ## Proposed solution
 The concept behind this software is to create a platform where individuals interested in conducting research can easily find relevant grants to suit their interests. Additionally, users can write blogs, participate in discussion forums with experienced researchers, and search for potential collaborators through our project-sharing feature. To ensure the success of each collaboration, users can track the progress of their projects by marking them as completed or not. This platform aims to foster a community of researchers, providing a space for discussion, collaboration, and knowledge-sharing that will benefit both individual researchers and the broader research community.
 
-## To get started with this web application, please follow these steps
+## Get started with this web application
+To get started with this web application, please follow these steps or open the hosted link provided in about section
 1. Clone the repository to your local machine.
 2. Open your terminal and navigate to the root directory of the cloned repository.
 3. Run the following commands in sequence:
