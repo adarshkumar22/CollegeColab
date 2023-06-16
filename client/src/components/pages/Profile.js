@@ -4,7 +4,7 @@ import { useAuth } from '../../context/auth/AuthState';
 
 const Profile = () => {
 
-    const id = useParams(); // get ID from the URL
+    const { id } = useParams(); // get ID from the URL
     // const [authState, authDispatch] = useAuth();
     // const { isAuthenticated, user } = authState;
 
@@ -13,16 +13,14 @@ const Profile = () => {
         const response = await fetch(`http://localhost:5000/api/users/${id}`, {
             method: "GET",
         });
-        // const data = await response.json();
-        setUser(response);
+        const data = await response.json();
+        setUser(data);
         console.log(response)
     };
-
+    // getUser();
     useEffect(() => {
         getUser();
     }, [])
-
-    
 
     return (
         
@@ -30,6 +28,9 @@ const Profile = () => {
             <h1>Profile</h1>
             {
                 user && <h4>{user.name}</h4>
+            }
+            {
+                user && <h4>{user.email}</h4>
             }
             
         </div>

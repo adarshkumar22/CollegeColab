@@ -11,6 +11,7 @@ const Post = () => {
       method: "GET",
     });
     const data = await response.json();
+    console.log(data)
     setPost(data);
   };
 
