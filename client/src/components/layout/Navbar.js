@@ -42,7 +42,7 @@ function Navbar({ title, icon }) {
       <Link to='/dashboard'>Dashboard</Link>
       <div>
         <Button
-          style={{color: 'white'}}
+          style={{color: '#003699', fontFamily: 'Montserrat', padding:'8px 8px 0 8px'}}
           onClick={handleClick}
         >
           Hello, {user && user.name}
@@ -85,7 +85,7 @@ function Navbar({ title, icon }) {
   );
 
   return (
-    <div className='navbar bg-primary'>
+    <div className='navbar'>
       <h1>
         <Link to='/'>
         <i class="fas fa-solid fa-book"></i> College Colab

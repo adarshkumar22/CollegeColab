@@ -43,7 +43,7 @@ const ContactItem = ({ contact }) => {
   }
 
   return (
-    <div className='card bg-light'>
+    <div className='card'>
       <h3 className='text-primary text-left'>
         <Link to={"/feed/"+_id}>{name}{' '}</Link>
         <span
@@ -86,12 +86,11 @@ const ContactItem = ({ contact }) => {
         )}
       </ul>
       <p>
-        {contact.likes.length}
         <button className='btn' onClick={likePost}>
           {
             postLiked === 1 ? 
-            <i class="fas fa-solid fa-thumbs-down"></i> :
-            <i class="fas fa-solid fa-thumbs-up"></i>
+            <i class="fas fa-solid fa-thumbs-down">&nbsp;{contact.likes.length}</i> :
+            <i class="fas fa-solid fa-thumbs-up">&nbsp;{contact.likes.length}</i>
           }
         </button>
         <button

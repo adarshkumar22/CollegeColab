@@ -3,9 +3,16 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ContactItem from './ContactItem';
 import Spinner from '../layout/Spinner';
 import { useContacts, getContacts } from '../../context/contact/ContactState';
+import { getFeed, useFeed } from '../../context/feed/FeedState';
 
 const Contacts = () => {
   const [contactState, contactDispatch] = useContacts();
+  const [feedState, feedDispatch] = useFeed();
+  const {feedPosts} = feedState;
+
+  useEffect(() => {
+      getFeed(feedDispatch);
+  }, [feedDispatch]);
 
   const { contacts, filtered } = contactState;
 

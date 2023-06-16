@@ -38,7 +38,7 @@ const FeedItem = ({ contact }) => {
   return (
     <div>
 
-      <div className='card bg-light' style={{margin: '2rem'}}>
+      <div className='card' style={{margin: '2rem'}}>
         <h3 className='text-primary text-left'>
           <Link to={"/feed/"+_id}>{name}{' '}</Link>
           
@@ -80,17 +80,15 @@ const FeedItem = ({ contact }) => {
           )}
         </ul>
         <p>
-          {contact.likes.length}
           <button className='btn' onClick={likePost}>
             {
               postLiked === 1 ? 
-              <i class="fas fa-solid fa-thumbs-down"></i> :
-              <i class="fas fa-solid fa-thumbs-up"></i>
+              <i class="fas fa-solid fa-thumbs-down">&nbsp;{contact.likes.length}</i> :
+              <i class="fas fa-solid fa-thumbs-up">&nbsp;{contact.likes.length}</i>
             }
           </button>
-          {contact.comments.length}
           <button className='btn'>
-            <i class="fas fa-solid fa-comment"></i>
+            <i class="fas fa-solid fa-comment">&nbsp;{contact.comments.length}</i>
           </button>
         </p>
       </div>

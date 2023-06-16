@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* Global Styles */
 :root {
@@ -15,14 +16,12 @@
   padding: 0;
 }
 
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-
 }
 
 a {
@@ -95,7 +94,6 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
   margin: 0.7rem 0;
 }
 
@@ -373,13 +371,13 @@ table th {
 }
 
 .navbar a {
-  color: #fff;
+  /* color: #fff; */
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .navbar a:hover {
-  color: var(--light-color);
+  /* color: var(--light-color); */
 }
 
 .navbar .welcome span {
@@ -390,10 +388,10 @@ table th {
 /* My CSS */
 form {
   padding: 1rem;
-  border: 1px solid lightgrey;
+  border: 1px solid #d8d7d7;
   border-radius: 10px;
-  background-color: whitesmoke;
-  box-shadow: 5px 5px 5px lightgray;
+  /* background-color: whitesmoke;
+  box-shadow: 5px 5px 5px lightgray; */
   margin-bottom: 10px;
 }
 
@@ -415,9 +413,9 @@ button{
 
 .card {
   border-radius: 10px;
-  background-color: whitesmoke;
-  box-shadow: 5px 5px 5px lightgray;
-
+  /* background-color: whitesmoke;
+  box-shadow: 5px 5px 5px lightgray; */
+  border: 1px solid #d8d7d7;
 }
 
 
