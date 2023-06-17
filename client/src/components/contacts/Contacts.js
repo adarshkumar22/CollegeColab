@@ -23,7 +23,7 @@ const Contacts = () => {
   if (contacts !== null && contacts.length === 0) {
     return <h4>Please add a post</h4>;
   }
-          
+
   return (
     <Fragment>
       <h2>Your Posts</h2>

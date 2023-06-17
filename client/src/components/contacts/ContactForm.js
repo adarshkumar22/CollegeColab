@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Input from '@mui/base/Input';
+import { styled } from '@mui/system';
+
 import {
   addContact,
   useContacts,
@@ -57,33 +60,37 @@ const ContactForm = () => {
       <h2 className='text-primary'>
         {current ? 'Edit Post' : 'Add Post'}
       </h2>
-      <input
+      <Input
         type='text'
         placeholder='Title'
         name='name'
         value={name}
         onChange={onChange}
+        slots={{ input: StyledInputElement }}
       />
-      <input
+      <Input
         type='text'
         placeholder='Eligibility'
         name='email'
         value={email}
         onChange={onChange}
+        slots={{ input: StyledInputElement }}
       />
-      <input
+      <Input
         type='text'
         placeholder='Apply Link'
         name='phone'
         value={phone}
         onChange={onChange}
+        slots={{ input: StyledInputElement }}
       />
-      <input
+      <Input
         type='text'
         placeholder='Description'
         name='description'
         value={description}
         onChange={onChange}
+        slots={{ input: StyledInputElement }}
       />
       <h5>Type</h5>
       <input
@@ -142,5 +149,59 @@ const ContactForm = () => {
     </form>
   );
 };
+
+
+const blue = {
+  100: '#DAECFF',
+  200: '#b6daff',
+  400: '#3399FF',
+  500: '#007FFF',
+  600: '#0072E5',
+  900: '#003A75',
+};
+
+const grey = {
+  50: '#f6f8fa',
+  100: '#eaeef2',
+  200: '#d0d7de',
+  300: '#afb8c1',
+  400: '#8c959f',
+  500: '#6e7781',
+  600: '#57606a',
+  700: '#424a53',
+  800: '#32383f',
+  900: '#24292f',
+};
+
+const StyledInputElement = styled('input')(
+  ({ theme }) => `
+  width: 320px;
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 12px;
+  border-radius: 12px;
+  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+  background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
+  box-shadow: 0px 2px 24px ${theme.palette.mode === 'dark' ? blue[900] : blue[100]};
+
+  &:hover {
+    border-color: ${blue[400]};
+  }
+
+  &:focus {
+    border-color: ${blue[400]};
+    box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
+  }
+
+  // firefox
+  &:focus-visible {
+    outline: 0;
+  }
+`,
+);
+
 
 export default ContactForm;

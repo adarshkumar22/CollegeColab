@@ -52,52 +52,73 @@ const Profile = () => {
             {
                 user && <h4>{user.email}</h4>
             }
-            <div style={{boxShadow: "3.84px 3.84px 12.8px rgba(21,46,171,.13)", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
-                <h1>List of completed Projects/Papers</h1>
-                {
-                    userPosts.map(post => (
-                        post.completed === "yescompleted" && 
-                        <div>
-                            <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
-                        </div>
-                    ))
-                }
+            <div className='profile-flex'>
+                <div style={{boxShadow: "3.84px 3.84px 12.8px rgba(21,46,171,.13)", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
+                    <h1>
+                        List of completed Projects/Papers 
+                        <span style={{fontWeight: "400", borderRadius: "50%", margin: "10px", padding: "2px 15px", backgroundColor: "lightgreen"}} >
+                            {numCompleted}
+                        </span>
+                    </h1>
+                    {
+                        userPosts.map(post => (
+                            post.completed === "yescompleted" && 
+                            <div>
+                                <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div style={{border: "1px solid #d8d7d7", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
+                    <h1>List of ongoing Projects/Papers
+                        <span style={{fontWeight: "400", borderRadius: "50%", margin: "10px", padding: "2px 15px", backgroundColor: "#00FFFF"}} >
+                            {numPending}
+                        </span>
+                    </h1>
+                    {
+                        userPosts.map(post => (
+                            post.completed !== "yescompleted" && 
+                            <div>
+                                <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
-            <div style={{border: "1px solid #d8d7d7", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
-                <h1>List of ongoing Projects/Papers</h1>
-                {
-                    userPosts.map(post => (
-                        post.completed !== "yescompleted" && 
-                        <div>
-                            <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
-                        </div>
-                    ))
-                }
-            </div>
+            <div className='profile-flex'>
+                <div style={{boxShadow: "3.84px 3.84px 12.8px rgba(21,46,171,.13)", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
+                    <h1>List of Projects
+                    <span style={{fontWeight: "400", borderRadius: "50%", margin: "10px", padding: "2px 15px", backgroundColor: "#6CB4EE"}} >
+                        {numProjects}
+                    </span>
+                    </h1>
+                    {
+                        userPosts.map(post => (
+                            post.type !== "professional" && 
+                            <div>
+                                <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
+                            </div>
+                        ))
+                    }
+                </div>
 
-            <div style={{boxShadow: "3.84px 3.84px 12.8px rgba(21,46,171,.13)", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
-                <h1>List of all Projects</h1>
-                {
-                    userPosts.map(post => (
-                        post.type !== "professional" && 
-                        <div>
-                            <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
-                        </div>
-                    ))
-                }
-            </div>
-
-            <div style={{border: "1px solid #d8d7d7", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
-                <h1>List of all Papers</h1>
-                {
-                    userPosts.map(post => (
-                        post.type === "professional" && 
-                        <div>
-                            <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
-                        </div>
-                    ))
-                }
+                <div style={{border: "1px solid #d8d7d7", borderRadius: "10px", margin: "30px 10px", padding: "15px"}}>
+                    <h1>List of Papers
+                    <span style={{fontWeight: "400", borderRadius: "50%", margin: "10px", padding: "2px 15px", backgroundColor: "#6CB4EE"}} >
+                        {numPapers}
+                    </span>
+                    </h1>
+                    {
+                        userPosts.map(post => (
+                            post.type === "professional" && 
+                            <div>
+                                <Link to={"/feed/"+post._id}>{post.name}{' '}</Link>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

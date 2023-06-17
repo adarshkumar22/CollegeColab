@@ -104,11 +104,13 @@ img {
 
 .list li {
   padding-bottom: 0.3rem;
+  font-weight: 500;
 }
 
 /* Padding */
 .p {
   padding: 0.5rem;
+  font-weight: 500;
 }
 .p-1 {
   padding: 1rem;
@@ -362,8 +364,8 @@ table th {
   z-index: 1;
   width: 100%;
   border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .navbar ul {
@@ -416,6 +418,7 @@ button{
   /* background-color: whitesmoke;
   box-shadow: 5px 5px 5px lightgray; */
   border: 1px solid #d8d7d7;
+  border-bottom: 3mm ridge rgba(50, 58, 220, 0.6);
 }
 
 
@@ -434,6 +437,14 @@ button{
 .item-exit-active {
   opacity: 0;
   transition: opacity 1000ms ease-in;
+}
+
+/* Profile styles */
+.profile-flex {
+  display: flex;
+}
+.profile-flex div {
+  width: 100%;
 }
 
 /* Mobile Styles */
@@ -474,5 +485,9 @@ button{
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+
+  .profile-flex {
+    display: block;
   }
 }
