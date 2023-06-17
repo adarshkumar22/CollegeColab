@@ -31,7 +31,7 @@ const Profile = () => {
 
     const [user, setUser] = useState(null);
     const getUser = async () => {
-        const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+        const response = await fetch(`https://college-colab.onrender.com/api/users/${id}`, {
             method: "GET",
         });
         const data = await response.json();

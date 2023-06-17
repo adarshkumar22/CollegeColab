@@ -91,7 +91,7 @@ const FeedItem = ({ contact }) => {
             {completed === 'notcompleted' ? <p>Ongoing</p> : <p>completed</p>}
           </span>
         </h3>
-        <h5>Posted By- {user.name}</h5>
+        {/* <h5>Posted By- {user.name}</h5> */}
         <ul className='list'>
           {email && (
             <li>
@@ -126,7 +126,7 @@ const FeedItem = ({ contact }) => {
         </p>
       </div>
       
-      <div className='card bg-light' style={{margin: '2rem'}}>
+      <div className='card' style={{margin: '2rem', backgroundColor: "#B2FFFF"}}>
         <h3>Comments</h3>
         <form style={{boxShadow:'none', border: 'none'}} onSubmit={onSubmit}>
           <input

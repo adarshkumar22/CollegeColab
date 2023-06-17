@@ -7,7 +7,7 @@ const Post = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const getPost = async () => {
-    const response = await fetch(`http://localhost:5000/api/contacts/${id}`, {
+    const response = await fetch(`https://college-colab.onrender.com/api/contacts/${id}`, {
       method: "GET",
     });
     const data = await response.json();
