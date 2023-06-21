@@ -45,3 +45,4 @@ The technologies utilized for this project include
    - Resume
 2. Add deadline in the post such that you can tell weather it is active or not.
 3. Add a feature through which user who creates the post would be able to see who has applied with there profile page link. Profile page will contain all the important and relevant information about applier like resume, skill, previous and ongoing papers/project.
+4. User who creates the post will appear a list of applied users. Now the creator can select the users and create whatsapp groups throught the website which will add all the applieres or selected candidates into there profile. Notifications will also be sent to them. Apply would be a simple form why do you want to apply, skill etc.
